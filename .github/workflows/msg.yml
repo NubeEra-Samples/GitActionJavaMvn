@@ -6,7 +6,9 @@ jobs:
   Job1-Message-Display:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Welcome to CICD"
-      - run: echo "OS is ${{ runner.os }}"
+      - run: echo "*************************"
       - run: ls ${{ github.workspace }}
-      - run: pwd
+      - name: Checking out Current Repository
+        uses: actions/checkout@v2
+      - run: ls ${{ github.workspace }}
+      - run: echo "*************************"
